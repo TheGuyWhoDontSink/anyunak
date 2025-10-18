@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('./images/b.gif') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.alap{
+  display: flex; 
+  flex-direction: column;
+  width: 360px;
+  height: fit-content;
+  border: 5px solid black;
+}
+
+.sor1{
+  border: 1px solid black;
+  background-color: yellow;
+}
+
+.heart-button {
+  align-self: center;
+  margin-top: 40px;
+  width: 100px;
+  height: 90px;
+  background-color: red;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease;
+  margin-left: 40px;
+}
+
+.heart-button::before,
+.heart-button::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart-button::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart-button::after {
+  left: 50px;
+  top: 0;
+}
+
+.heart-button:hover {
+  transform: rotate(-45deg) scale(1.1);
+}
+
+.heart-button:active {
+  transform: rotate(-45deg) scale(0.95);
+}
+
+.sor2{
+  height: 150px;
+  background-color: yellow;
+}
+
+.kep{
+  border: 5px solid black;
+}
+
+.mond{
+  margin-left: 5px;
+  color: #b22222;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.hidden{
+  display: none;
+}
+
+#montage-img {
+  position: absolute;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  z-index: 5;
+}
+
+/* Animációk */
+.fade-in { opacity: 1; transform: scale(1); }
+.zoom-in { opacity: 1; transform: scale(1.2); }
+.slide-left { opacity: 1; transform: translateX(-50px); }
+.slide-right { opacity: 1; transform: translateX(50px); }
+.rotate-in { opacity: 1; transform: rotate(3deg) scale(1.05); }
+
